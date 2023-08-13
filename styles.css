@@ -1,0 +1,96 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatar {
+    width: 118px;
+    height: 140px;
+    border: 4px solid rgba(86, 255, 182, .15);
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: linear-gradient(322deg, rgba(59,244,189,1) 0%, rgba(80,246,244,1) 100%);
+    color: #2F3061;
+    position: relative;
+    border: .5px solid aquamarine;
+    box-shadow: 2px 5px 13px 3px rgba(0,0,0,0.59);
+    transition: all 1.6s ease-in-out;
+    overflow: hidden;
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
+}
+
+.card:hover{
+  transform: scale(1.1);
+  
+}
+
+.card::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(45deg, #00E0C6, #00E0C6 10px, #F0FFF9 10px, #F0FFF9 20px);
+  z-index: 1;  
+}
+
+.border-blue {
+    border: 1px dotted blue;
+}
+
+.card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(90deg, transparent 33%, rgba(255,255,255,0.3) 50%, transparent 66%);
+  background-size: 300% auto;
+  background-position: left center;
+  animation: shine 4s infinite linear;
+}
+
+
+@keyframes shine {
+  from {
+    background-position: right center;
+  }
+  to {
+    background-position: left center;
+  }
+}
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
+/*
+Final challenge:
+Download the code to your local computer and place it
+in a folder called "business-card"
+*/
